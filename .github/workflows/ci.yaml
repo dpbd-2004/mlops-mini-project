@@ -88,6 +88,4 @@ jobs:
             docker pull 361753377361.dkr.ecr.eu-north-1.amazonaws.com/dp_ecr:latest
             docker stop mlops-app || true
             docker rm mlops-app || true
-            docker run -p 80:5000 -e DAGSHUB_PAT=8739f6c351adb871d5d080540aa06026e504b1b6 --name mlops-app 361753377361.dkr.ecr.eu-north-1.amazonaws.com/dp_ecr:latest
-
-
+            docker run -d -p 80:5000 -e DAGSHUB_PAT=8739f6c351adb871d5d080540aa06026e504b1b6 --name mlops-app 361753377361.dkr.ecr.eu-north-1.amazonaws.com/dp_ecr:latest
